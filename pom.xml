@@ -10,6 +10,40 @@
 
 	<name>data-generator</name>
 	<description>Data generator for projects</description>
+	
+	<developers>
+		<developer>
+			<name>Andy Gibson</name>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<email>contact@andygibson.net</email>
+			<url>www.andygibson.net</url>
+		</developer>
+		<developer>
+			<name>Rodrigo Nievez</name>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<email>rodrigo.nievez@gmail.com</email>
+			<url>www.geekearte.com</url>
+		</developer>
+	</developers>
+	
+	<licenses>
+		<license>
+			<name>LGPL Version 3</name>
+			<url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+
+	<scm>
+		<connection>scm:git:git://github.com/andygibson/datafactory.git</connection>
+		<url>scm:git:git://github.com/andygibson/datafactory</url>
+		<developerConnection>scm:git:git@github.com:andygibson/datafactory.git</developerConnection>
+	</scm>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
