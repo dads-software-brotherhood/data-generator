@@ -44,8 +44,7 @@ public class DefaultCurpRfcDataValues implements CurpRfcDataValues {
 
 	/**
 	 * Los elementos de este arreglo se crean al azar, con base al formato
-	 * publicado en
-	 * https://www.consisa.com.mx/paginas/como_calcular_RFC.php
+	 * publicado en https://www.consisa.com.mx/paginas/como_calcular_RFC.php
 	 * 
 	 * para peronas físicas y morales.
 	 */
@@ -94,35 +93,40 @@ public class DefaultCurpRfcDataValues implements CurpRfcDataValues {
 	public String getRandomRfc() {
 		return rfc[random.nextInt(rfc.length)];
 	}
-	
+
 	@Override
 	public String getRandomRfcMoral() {
 		return rfc[random.nextInt(rfcMoral.length)];
 	}
 
+
+	/*
+	public static void main(String[] args) {
+		generateData();
+
+	}*/
+	
 	/**
 	 * Este método, solo se utiliza para generar el stack de curp y rfc el
 	 * resultado de la primera ejecución se muestra arriba para cada variable.
+	 * Formato curp C V C C N N N N N N S E E C C C N N 
+	 * Formato rfc persona física C V C C N N N N N N C C N 
+	 * Formato rfc persona moral C V C N N N N N N C N N 
 	 * 
-	 * @param args
+	 * C = consonant 
+	 * V = vowel 
+	 * S = sex 
+	 * E = short entity
 	 */
-	public static void main(String[] args) {
-		boolean isCurp =  true;
+	private void generateData() {
+		boolean isCurp = true;
 		boolean isMoral = false;
 		DataFactory dataFactory = new DataFactory();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyMMdd");
 		int consonantsLenght = Constants.CONSONANTS.length - 1;
 		int vowelsLength = Constants.VOWELS.length - 1;
 		int numbersLength = Constants.NUMBERS.length - 1;
-		/**
-		 * Formato curp C V C C N N N N N N S E E C C C N N 
-		 * Formato rfc persona física  C V C C N N N N N N C C N
-		 * Formato rfc persona moral  C V C  N N N N N N C N N
-		 * C = consonant 
-		 * V = vowel 
-		 * S = sex 
-		 * E = short entity
-		 */
+		
 		try {
 			for (int i = 0; i < 100; i++) {
 				StringBuilder result = new StringBuilder();
@@ -144,12 +148,12 @@ public class DefaultCurpRfcDataValues implements CurpRfcDataValues {
 					result.append(Constants.CONSONANTS[random.nextInt(consonantsLenght)]);
 					if (!isMoral) {
 						result.append(Constants.CONSONANTS[random.nextInt(consonantsLenght)])
-						.append(Constants.NUMBERS[random.nextInt(numbersLength)]);
+								.append(Constants.NUMBERS[random.nextInt(numbersLength)]);
 					} else {
 						result.append(Constants.NUMBERS[random.nextInt(numbersLength)])
-						.append(Constants.NUMBERS[random.nextInt(numbersLength)]);
+								.append(Constants.NUMBERS[random.nextInt(numbersLength)]);
 					}
-							
+
 				}
 
 				result.append("\"");
@@ -162,6 +166,5 @@ public class DefaultCurpRfcDataValues implements CurpRfcDataValues {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 }
