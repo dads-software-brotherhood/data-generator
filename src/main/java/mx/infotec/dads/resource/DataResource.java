@@ -18,80 +18,80 @@ public class DataResource {
 	@Autowired
 	DataService dataService;
 	
-	@RequestMapping("/name")
+	@RequestMapping("/names")
 	public String getName() {
 		return dataService.getNames(1).get(0);
 	}
 	
-	@RequestMapping("/name/{number}")
+	@RequestMapping("/names/{number}")
 	public List<String> getNames(@PathVariable("number")int number){
 		
 		return dataService.getNames(number);
 	}
 	
-	@RequestMapping("/last/name")
+	@RequestMapping("/last/names")
 	public String getLastName() {
 		return dataService.getLastName(1).get(0);
 	}
 	
-	@RequestMapping("/last/name/{number}")
+	@RequestMapping("/last/names/{number}")
 	public List<String> getLastName(@PathVariable("number")int number){
 		
 		return dataService.getLastName(number);
 	}
 	
-	@RequestMapping("/person")
+	@RequestMapping("/persons")
 	public Persona getPersona() {
 		
 		return dataService.generarPersonas(1).get(0);
 	}
 	
-	@RequestMapping("/person/{number}")
+	@RequestMapping("/persons/{number}")
 	public List<Persona> getPersonas(@PathVariable("number")int number) {
 		
 		return dataService.generarPersonas(number);
 	}
 	
-	@RequestMapping("/direction")
+	@RequestMapping("/address")
 	public Direccion getDireccion() {
 		
 		return dataService.generarDirecciones(1).get(0);
 	}
 	
-	@RequestMapping("/direction/{number}")
+	@RequestMapping("/address/{number}")
 	public List<Direccion> getDirecciones(@PathVariable("number")int number) {
 		
 		return dataService.generarDirecciones(number);
 	}
 	
-	@RequestMapping("/rfc")
+	@RequestMapping("/rfcs")
 	public String getRfc() {
 		return dataService.getRfcs(1).get(0);
 	}
 	
-	@RequestMapping("/rfc/{number}")
+	@RequestMapping("/rfcs/{number}")
 	public List<String> getRfcs(@PathVariable("number")int number){
 		
 		return dataService.getRfcs(number);
 	}
 	
-	@RequestMapping("/rfc/moral")
+	@RequestMapping("/rfcs/moral")
 	public String getRfcMoral() {
 		return dataService.getRfcMorales(1).get(0);
 	}
 	
-	@RequestMapping("/rfc/moral/{number}")
+	@RequestMapping("/rfcs/moral/{number}")
 	public List<String> getRfcMorales(@PathVariable("number")int number){
 		
 		return dataService.getRfcMorales(number);
 	}
 
-	@RequestMapping("/curp")
+	@RequestMapping("/curps")
 	public String getCurp() {
 		return dataService.getCurp(1).get(0);
 	}
 	
-	@RequestMapping("/curp/{number}")
+	@RequestMapping("/curps/{number}")
 	public List<String> getCurps(@PathVariable("number")int number){
 		
 		return dataService.getCurp(number);
@@ -109,12 +109,12 @@ public class DataResource {
 		return dataService.getEntidades(id).get(0);
 	}
 	
-	@RequestMapping("/email")
+	@RequestMapping("/emails")
 	public String getEmail() {
 		return dataService.getEmail(1).get(0);
 	}
 	
-	@RequestMapping("/email/{cantidad}")
+	@RequestMapping("/emails/{cantidad}")
 	public List<String> getEmails(@PathVariable("cantidad")int cantidad) {
 		
 		return dataService.getEmail(cantidad);

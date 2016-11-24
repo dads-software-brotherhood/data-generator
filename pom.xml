@@ -10,7 +10,7 @@
 
 	<name>data-generator</name>
 	<description>Data generator for projects</description>
-	
+
 	<developers>
 		<developer>
 			<name>Andy Gibson</name>
@@ -29,7 +29,7 @@
 			<url>www.geekearte.com</url>
 		</developer>
 	</developers>
-	
+
 	<licenses>
 		<license>
 			<name>LGPL Version 3</name>
@@ -49,7 +49,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
@@ -68,6 +68,19 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- Dependencias para bootstrap -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.webjars</groupId>
+					<artifactId>jquery</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 
