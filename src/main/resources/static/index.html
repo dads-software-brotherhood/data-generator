@@ -3,21 +3,94 @@
 <head>
 <title>Data generator</title>
 
-<link rel='stylesheet' href='webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet'
+	href='webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='/css/style.css'>
 
 </head>
 
-<body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-6">
-				<h1 class="test">COL1</h1>
+<body id="page-top" class="index">
+
+	<!-- Navigation -->
+	<nav id="mainNav"
+		class="navbar navbar-default navbar-fixed-top navbar-custom">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i
+						class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand" href="#page-top">Data-Generator</a>
 			</div>
-			
-			<div class="col-md-6">
-				<h1>COL2</h1>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="hidden"><a href="#page-top"></a></li>
+					<li class="page-scroll"><a href="#about">About</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<!-- Header -->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<img class="img-responsive" src="/img/data.png" alt="">
+					<div class="intro-text">
+						<span class="name">Data Generator</span>
+						<hr class="star-light">
+						<span class="skills">Datos, Proyectos, Generadores,
+							Servicios REST</span>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</header>
+
+	<!-- About Section -->
+	<section class="success" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>About</h2>
+					<hr class="star-light">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-2" intro-text>
+					<p>Data-Generator, es una herramienta simple para generar datos
+						aleatorios, como nombres, apellidos, direcciones de correo
+						electrónico y datos personales como lo es el CURP y RFC, tanto
+						para personas físicas como morales.</p>
+
+				</div>
+
+				<div class="col-lg-4 intro-text">
+					<p>
+						Además provee dos objetos <strong>Person</strong> y <strong>Address</strong>,
+						estos objetos, cuentan con información relevante comunte utilizada
+						en la creación de usuarios en muchos de nuestros proyectos. Todos
+						esto se expone atravez de servicios REST y devolviendo un texto en
+						formato json.
+				</div>
+
+				<div class="col-lg-8 col-lg-offset-2 text-center">
+					<a href="http://gitlab.dads.infotec.mx/arquitectura-dads/data-generator/wikis/" 
+						class="btn btn-lg btn-outline"> <i
+						class="fa fa-download"></i> Documentación
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</section>
 </body>
 </html>
